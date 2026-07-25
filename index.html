@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#21170f">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Eldoria">
+  <meta name="description" content="Chronicles of Eldoria — a deep world-driven idle role-playing game inspired by classic skill training games.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Chronicles of Eldoria</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-view">Skip to game content</a>
+
+  <div id="boot-screen" class="boot-screen" role="status" aria-live="polite">
+    <div class="boot-emblem">✦</div>
+    <h1>Chronicles of Eldoria</h1>
+    <p id="boot-status">Opening the chronicle…</p>
+  </div>
+
+  <section id="character-gate" class="character-gate" hidden aria-labelledby="character-gate-title">
+    <div class="gate-backdrop"></div>
+    <div class="gate-panel">
+      <header class="gate-header">
+        <img src="./assets/icons/icon-192.png" alt="" class="gate-icon">
+        <div>
+          <p class="eyebrow">SimpleScape reborn</p>
+          <h1 id="character-gate-title">Chronicles of Eldoria</h1>
+          <p>Choose a local character or begin a new Chronicle.</p>
+        </div>
+      </header>
+      <div id="character-slots" class="character-slots"></div>
+      <div class="gate-actions">
+        <button type="button" class="button" data-action="import-account">Import account</button>
+        <button type="button" class="button" data-action="export-account">Export account</button>
+        <button type="button" class="button primary" data-action="install-app" hidden>Install app</button>
+      </div>
+      <p class="gate-note">Progress autosaves to this browser through IndexedDB. Exported files remain the safest portable backup.</p>
+    </div>
+  </section>
+
+  <div id="update-banner" class="update-banner" role="status" aria-live="polite" hidden>
+    <span><strong>A new Chronicle build is ready.</strong> Your local save will be snapshotted before the update is applied.</span>
+    <button type="button" class="button primary small" data-action="apply-update">Save and update</button>
+  </div>
+
+  <div id="game-shell" class="game-shell" hidden>
+    <header class="topbar">
+      <button type="button" class="brand-button" data-action="open-character-gate" aria-label="Switch character">
+        <img src="./assets/icons/icon-192.png" alt="" class="brand-icon">
+        <span class="brand-copy"><strong>Chronicles of Eldoria</strong><small id="character-subtitle">Local Chronicle</small></span>
+      </button>
+
+      <button type="button" class="activity-chip" data-action="open-activity" aria-label="Open current activity">
+        <span id="activity-icon" class="activity-icon">💤</span>
+        <span class="activity-copy"><small>Current activity</small><strong id="activity-label">Idle</strong></span>
+        <span id="activity-progress-mini" class="mini-progress" aria-hidden="true"><span></span></span>
+      </button>
+
+      <div class="top-stats" aria-label="Character summary">
+        <button type="button" class="top-stat" data-view="bank" title="Open inventory and bank"><span>🪙</span><strong id="top-coins">0</strong></button>
+        <button type="button" class="top-stat hp-stat" data-view="character" title="Open character">
+          <span>❤</span><span class="top-hp-track"><span id="top-hp-fill"></span></span><strong id="top-hp">0/0</strong>
+        </button>
+        <button type="button" class="top-stat location-stat" data-view="map" title="Open world map"><span>📍</span><strong id="top-location">Stonehaven</strong></button>
+      </div>
+
+      <div class="top-actions">
+        <button type="button" class="icon-button" data-action="open-search" aria-label="Search Eldoria" title="Search Eldoria"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#search"></use></svg></button>
+        <button type="button" class="icon-button" data-action="open-inbox" aria-label="Open notifications"><span>🔔</span><b id="inbox-badge" hidden>0</b></button>
+        <button type="button" id="header-save-status" class="icon-button save-indicator" data-action="manual-save" data-status="saved" aria-label="Save now" title="Save now">✓</button>
+        <button type="button" class="icon-button" data-action="install-app" aria-label="Install app" title="Install app" hidden>⬇️</button>
+        <button type="button" class="icon-button" data-view="settings" aria-label="Open settings"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#settings"></use></svg></button>
+      </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar" aria-label="Main navigation"></nav>
+
+    <main id="main-view" class="main-view" tabindex="-1"></main>
+
+    <aside id="context-drawer" class="context-drawer" aria-label="Activity and world context"></aside>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <button type="button" data-view="dashboard"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#home"></use></svg><small>Home</small></button>
+      <button type="button" data-view="map"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#map"></use></svg><small>Map</small></button>
+      <button type="button" data-action="open-activity"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#activity"></use></svg><small>Activity</small></button>
+      <button type="button" data-view="character"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#character"></use></svg><small>Character</small></button>
+      <button type="button" data-action="open-mobile-menu"><svg class="ui-icon" aria-hidden="true"><use href="./assets/icons/ui/sprite.svg#more"></use></svg><small>More</small></button>
+    </nav>
+  </div>
+
+  <div id="modal-layer" class="modal-layer" hidden>
+    <div class="modal-scrim" data-action="close-modal"></div>
+    <section id="modal-card" class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section>
+  </div>
+
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div id="save-status" class="save-status" aria-live="polite" hidden>Local save ready</div>
+
+  <noscript>
+    <div class="noscript">Chronicles of Eldoria requires JavaScript to run.</div>
+  </noscript>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

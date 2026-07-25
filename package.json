@@ -1,0 +1,13 @@
+{
+  "name": "chronicles-of-eldoria",
+  "version": "1.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node tools/validate-project.mjs",
+    "check": "npm test && npm run validate",
+    "serve": "node tools/serve.mjs",
+    "mobile:qa": "python tools/mobile-qa.py"
+  }
+}

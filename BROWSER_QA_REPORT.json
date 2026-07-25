@@ -1,0 +1,6149 @@
+{
+  "project": "Chronicles of Eldoria \u2014 The Memory Beneath",
+  "version": "1.1.0",
+  "baseUrl": "http://127.0.0.1:4174/Chronicles-of-Eldoria/",
+  "startedAt": "2026-07-25T01:27:49.553647+00:00",
+  "completedAt": "2026-07-25T01:28:08.800395+00:00",
+  "passed": true,
+  "summary": {
+    "checks": 25,
+    "passed": 25,
+    "failed": 0,
+    "viewportCombinations": 120,
+    "runtimeErrors": 0
+  },
+  "checks": [
+    {
+      "name": "Application booted without the fatal fallback screen",
+      "category": "functional",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Account and character schemas load at the overhaul versions",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "accountSchema": 3,
+        "characterSchema": 7,
+        "activeSlot": 0,
+        "characterName": "Ari Vale",
+        "appVersionText": "Ari Vale \u00b7 Keeper of the Chronicle"
+      }
+    },
+    {
+      "name": "All requested viewport/view combinations avoid page-level and main-view horizontal overflow",
+      "category": "responsive",
+      "passed": true,
+      "details": {
+        "tested": 120,
+        "failures": []
+      }
+    },
+    {
+      "name": "Map zoom changes the transform without expanding the document",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "before": "translate3d(0px, 43.1438px, 0px) scale(0.248288)",
+        "after": "translate3d(0px, 70px, 0px) scale(0.297945)",
+        "viewportRect": {
+          "x": 15,
+          "y": 444.390625,
+          "width": 360,
+          "height": 405.109375,
+          "top": 444.390625,
+          "right": 375,
+          "bottom": 849.5,
+          "left": 15
+        },
+        "mainRect": {
+          "x": 0,
+          "y": 113,
+          "width": 390,
+          "height": 666,
+          "top": 113,
+          "right": 390,
+          "bottom": 779,
+          "left": 0
+        },
+        "contained": true,
+        "overflow": "hidden",
+        "transform": "translate3d(0px, 70px, 0px) scale(0.297945)",
+        "routeCount": 24,
+        "markerCount": 17
+      }
+    },
+    {
+      "name": "Map route overlay and region markers render",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "viewportRect": {
+          "x": 15,
+          "y": 444.390625,
+          "width": 360,
+          "height": 405.109375,
+          "top": 444.390625,
+          "right": 375,
+          "bottom": 849.5,
+          "left": 15
+        },
+        "mainRect": {
+          "x": 0,
+          "y": 113,
+          "width": 390,
+          "height": 666,
+          "top": 113,
+          "right": 390,
+          "bottom": 779,
+          "left": 0
+        },
+        "contained": true,
+        "overflow": "hidden",
+        "transform": "translate3d(0px, 70px, 0px) scale(0.297945)",
+        "routeCount": 24,
+        "markerCount": 17
+      }
+    },
+    {
+      "name": "Map supports keyboard zoom/pan and highlights the selected travel route",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "before": "translate3d(0px, 70px, 0px) scale(0.297945)",
+        "after": "translate3d(-76.4px, 70px, 0px) scale(0.351575)",
+        "zoomBucket": "low",
+        "activeRoutes": 2,
+        "selectedCentered": true
+      }
+    },
+    {
+      "name": "Advanced activity planner exposes estimates, stop rules, reserves, logistics, and linked-plan controls",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "estimateExcerpt": "PLAN ESTIMATE\n\nMine Copper\nPreview actions\n2\nDuration\n5 seconds\nXP\n48\nXP/hour\n33,553\nExpected output\nCopper Ore\n\u2248 2\nLikely stop condition\nFirst rare drop or another configured condition\n\nEstimates use current mastery, equipment, region, and world modifiers. Random yields and events can change the re",
+        "state": {
+          "actionId": "mine_copper",
+          "actionCount": 2,
+          "stopOnRareDrop": true,
+          "depositOutputs": true,
+          "returnToTown": true
+        }
+      }
+    },
+    {
+      "name": "Activity progress is interpolated through requestAnimationFrame",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "distinctSamples": 32,
+        "samples": [
+          "17.67955801104972|scaleX(0.176796)",
+          "18.35043409629045|scaleX(0.183504)",
+          "19.73164956590371|scaleX(0.197316)",
+          "20.36306235201263|scaleX(0.203631)",
+          "21.665351223362272|scaleX(0.216654)",
+          "22.296764009471193|scaleX(0.222968)",
+          "23.638516179952642|scaleX(0.236385)",
+          "24.348855564325177|scaleX(0.243489)"
+        ]
+      }
+    },
+    {
+      "name": "Routine simulation does not replace the dashboard root DOM node",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "sampleWindowMs": 704
+      }
+    },
+    {
+      "name": "Combat emits explicit attack/support presentation events and renders effect layers",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "events": [
+          {
+            "id": "8b5d847c-9b63-495b-87ec-96aeb11bf56c",
+            "type": "combat:shield",
+            "timestamp": 1784942885192,
+            "abilityId": "guard",
+            "sourceId": "player",
+            "targetId": "player",
+            "healing": 0,
+            "removedStatuses": [],
+            "interrupted": false,
+            "shielded": true,
+            "label": "Guard"
+          },
+          {
+            "id": "fa842ae4-6f68-40fd-bd5a-dcc92037d6a7",
+            "type": "combat:round",
+            "timestamp": 1784942892129,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 1,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          },
+          {
+            "id": "0fff6657-c47c-4de6-a972-ba4564b6427f",
+            "type": "combat:round",
+            "timestamp": 1784942894661,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 28,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          },
+          {
+            "id": "66657147-4730-423e-8f5e-25ca01c37649",
+            "type": "combat:round",
+            "timestamp": 1784942897193,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 28,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          }
+        ],
+        "layers": 2,
+        "splats": 3,
+        "cues": 7,
+        "supportEvent": true,
+        "cardOverflow": "visible",
+        "surfaceOverflow": "hidden",
+        "layerOverflow": "visible",
+        "activityKind": "combat"
+      }
+    },
+    {
+      "name": "Combat effects are outside the clipping surface",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "events": [
+          {
+            "id": "8b5d847c-9b63-495b-87ec-96aeb11bf56c",
+            "type": "combat:shield",
+            "timestamp": 1784942885192,
+            "abilityId": "guard",
+            "sourceId": "player",
+            "targetId": "player",
+            "healing": 0,
+            "removedStatuses": [],
+            "interrupted": false,
+            "shielded": true,
+            "label": "Guard"
+          },
+          {
+            "id": "fa842ae4-6f68-40fd-bd5a-dcc92037d6a7",
+            "type": "combat:round",
+            "timestamp": 1784942892129,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 1,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          },
+          {
+            "id": "0fff6657-c47c-4de6-a972-ba4564b6427f",
+            "type": "combat:round",
+            "timestamp": 1784942894661,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 28,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          },
+          {
+            "id": "66657147-4730-423e-8f5e-25ca01c37649",
+            "type": "combat:round",
+            "timestamp": 1784942897193,
+            "round": 0,
+            "enemyId": "hill_goblin",
+            "sourceId": "player",
+            "targetId": "hill_goblin",
+            "enemyDamage": 28,
+            "playerDamage": 0,
+            "playerHealing": 0,
+            "result": "hit",
+            "playerResult": "miss",
+            "enemyDefeated": true,
+            "playerDefeated": false,
+            "abilityId": null,
+            "damageType": "crush",
+            "appliedPlayerStatuses": [],
+            "appliedEnemyStatuses": [],
+            "telegraphStarted": null,
+            "specialResolved": null
+          }
+        ],
+        "layers": 2,
+        "splats": 3,
+        "cues": 7,
+        "supportEvent": true,
+        "cardOverflow": "visible",
+        "surfaceOverflow": "hidden",
+        "layerOverflow": "visible",
+        "activityKind": "combat"
+      }
+    },
+    {
+      "name": "All three flagship quests appear in the narrative journal",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "hasBell": true,
+        "hasWall": true,
+        "hasAsh": true,
+        "modalHasStory": true,
+        "modalHasInteractiveControl": true,
+        "status": "active"
+      }
+    },
+    {
+      "name": "A staged quest opens with authored story and interactive objectives",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "hasBell": true,
+        "hasWall": true,
+        "hasAsh": true,
+        "modalHasStory": true,
+        "modalHasInteractiveControl": true,
+        "status": "active"
+      }
+    },
+    {
+      "name": "Dashboard and context drawer remain stable with a staged quest active",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "dashboardExcerpt": "\ud83c\udfe0 CHRONICLE OF ELDORIA\n\nWelcome back, Ari Vale\n\nPlan a focused activity, manage passive systems, and respond to Eldoria\u2019",
+        "contextExcerpt": "MEMORY BENEATH\n\ud83d\udd14 The Bell Beneath Crystal Lake\nFootprints to the Water\nCURRENT ACTIVITY\n\ud83d\udca4 Idle\nResting in Stonehaven\nWORLD CONDITIONS\n\u2620\ufe0f Corruption Surge\nCorrupted enemies are stronger and drop more r"
+      }
+    },
+    {
+      "name": "Global search finds named narrative content",
+      "category": "functional",
+      "passed": true,
+      "details": "Bellkeeper\u2019s Token\nItem \u00b7 A small crystal bell that rings only near remembered grief.\nThe Bellkeeper\u2019s Burden\nEnemy \u00b7 Crystal Lake\nThe Bellkeeper\nNPC \u00b7 A keeper fused to the mechanism that has held Veyra\u2019s Rest together for generations."
+    },
+    {
+      "name": "Primary content icons use the local semantic SVG sprite",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "count": 3,
+        "external": false
+      }
+    },
+    {
+      "name": "Animal Husbandry, Ritualism, and Diplomacy render as playable town systems",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "husbandry": true,
+        "ritualism": true,
+        "diplomacy": true
+      }
+    },
+    {
+      "name": "Item detail sheet remains within a 320\u00d7568 viewport",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "card": {
+          "x": 0,
+          "y": 34.09375,
+          "width": 320,
+          "height": 533.90625,
+          "top": 34.09375,
+          "right": 320,
+          "bottom": 568,
+          "left": 0
+        },
+        "body": {
+          "x": 1,
+          "y": 95.09375,
+          "width": 318,
+          "height": 471.90625,
+          "top": 95.09375,
+          "right": 319,
+          "bottom": 567,
+          "left": 1
+        },
+        "width": 320,
+        "height": 568,
+        "contained": true,
+        "bodyScrollable": true,
+        "title": "\ud83e\udeb5 Normal Logs"
+      }
+    },
+    {
+      "name": "150% text, reduced motion, and high contrast apply without horizontal page overflow",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "reduced": true,
+        "highContrast": true,
+        "fontSize": "24px",
+        "overflow": 0,
+        "maximumScaleBlocked": false
+      }
+    },
+    {
+      "name": "Viewport metadata permits user zoom",
+      "category": "functional",
+      "passed": true,
+      "details": {
+        "reduced": true,
+        "highContrast": true,
+        "fontSize": "24px",
+        "overflow": 0,
+        "maximumScaleBlocked": false
+      }
+    },
+    {
+      "name": "Service worker installs within the local app scope and controls reloads",
+      "category": "pwa",
+      "passed": true,
+      "details": {
+        "ready": {
+          "scope": "http://127.0.0.1:4174/Chronicles-of-Eldoria/",
+          "active": true
+        },
+        "controlled": true,
+        "caches": [
+          "eldoria-shell-1.1.0-memory-beneath",
+          "eldoria-runtime-1.1.0-memory-beneath"
+        ],
+        "registrations": [
+          "http://127.0.0.1:4174/Chronicles-of-Eldoria/"
+        ]
+      }
+    },
+    {
+      "name": "Versioned app-shell/runtime caches are present",
+      "category": "pwa",
+      "passed": true,
+      "details": {
+        "controlled": true,
+        "caches": [
+          "eldoria-shell-1.1.0-memory-beneath",
+          "eldoria-runtime-1.1.0-memory-beneath"
+        ],
+        "registrations": [
+          "http://127.0.0.1:4174/Chronicles-of-Eldoria/"
+        ]
+      }
+    },
+    {
+      "name": "Installed app reloads from cache while offline",
+      "category": "pwa",
+      "passed": true,
+      "details": {
+        "title": "Chronicles of Eldoria",
+        "shell": true,
+        "controlled": true
+      }
+    },
+    {
+      "name": "Manifest screenshots were regenerated at their declared dimensions",
+      "category": "pwa",
+      "passed": true,
+      "details": {
+        "actual": [
+          [
+            1440,
+            1000
+          ],
+          [
+            1440,
+            1000
+          ],
+          [
+            390,
+            844
+          ]
+        ],
+        "expected": [
+          [
+            1440,
+            1000
+          ],
+          [
+            1440,
+            1000
+          ],
+          [
+            390,
+            844
+          ]
+        ]
+      }
+    },
+    {
+      "name": "No page runtime or console errors were observed",
+      "category": "runtime",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "viewportResults": [
+    {
+      "view": "dashboard",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 320,
+      "height": 568,
+      "documentScrollWidth": 320,
+      "documentClientWidth": 320,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 320,
+        "height": 390,
+        "top": 113,
+        "right": 320,
+        "bottom": 503,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 113,
+            "top": 0,
+            "right": 320,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 503,
+            "width": 320,
+            "height": 65,
+            "top": 503,
+            "right": 320,
+            "bottom": 568,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 360,
+      "height": 740,
+      "documentScrollWidth": 360,
+      "documentClientWidth": 360,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 360,
+        "height": 562,
+        "top": 113,
+        "right": 360,
+        "bottom": 675,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 113,
+            "top": 0,
+            "right": 360,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 675,
+            "width": 360,
+            "height": 65,
+            "top": 675,
+            "right": 360,
+            "bottom": 740,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 390,
+      "height": 844,
+      "documentScrollWidth": 390,
+      "documentClientWidth": 390,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 390,
+        "height": 666,
+        "top": 113,
+        "right": 390,
+        "bottom": 779,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 113,
+            "top": 0,
+            "right": 390,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 779,
+            "width": 390,
+            "height": 65,
+            "top": 779,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 412,
+      "height": 915,
+      "documentScrollWidth": 412,
+      "documentClientWidth": 412,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 113,
+        "width": 412,
+        "height": 737,
+        "top": 113,
+        "right": 412,
+        "bottom": 850,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 412,
+            "height": 113,
+            "top": 0,
+            "right": 412,
+            "bottom": 113,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 850,
+            "width": 412,
+            "height": 65,
+            "top": 850,
+            "right": 412,
+            "bottom": 915,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 568,
+      "height": 320,
+      "documentScrollWidth": 568,
+      "documentClientWidth": 568,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 105,
+        "width": 568,
+        "height": 160,
+        "top": 105,
+        "right": 568,
+        "bottom": 265,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 105,
+            "top": 0,
+            "right": 568,
+            "bottom": 105,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 265,
+            "width": 568,
+            "height": 55,
+            "top": 265,
+            "right": 568,
+            "bottom": 320,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 740,
+      "height": 360,
+      "documentScrollWidth": 740,
+      "documentClientWidth": 740,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 103,
+        "width": 740,
+        "height": 202,
+        "top": 103,
+        "right": 740,
+        "bottom": 305,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 103,
+            "top": 0,
+            "right": 740,
+            "bottom": 103,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 305,
+            "width": 740,
+            "height": 55,
+            "top": 305,
+            "right": 740,
+            "bottom": 360,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 768,
+      "height": 1024,
+      "documentScrollWidth": 768,
+      "documentClientWidth": 768,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 0,
+        "y": 109,
+        "width": 768,
+        "height": 850,
+        "top": 109,
+        "right": 768,
+        "bottom": 959,
+        "left": 0
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 109,
+            "top": 0,
+            "right": 768,
+            "bottom": 109,
+            "left": 0
+          }
+        },
+        {
+          "className": "mobile-nav",
+          "rect": {
+            "x": 0,
+            "y": 959,
+            "width": 768,
+            "height": 65,
+            "top": 959,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 1024,
+      "height": 768,
+      "documentScrollWidth": 1024,
+      "documentClientWidth": 1024,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 210,
+        "y": 64,
+        "width": 814,
+        "height": 704,
+        "top": 64,
+        "right": 1024,
+        "bottom": 768,
+        "left": 210
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 64,
+            "top": 0,
+            "right": 1024,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 1366,
+      "height": 768,
+      "documentScrollWidth": 1366,
+      "documentClientWidth": 1366,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 826,
+        "height": 704,
+        "top": 64,
+        "right": 1056,
+        "bottom": 768,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1366,
+            "height": 64,
+            "top": 0,
+            "right": 1366,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 1920,
+      "height": 1080,
+      "documentScrollWidth": 1920,
+      "documentClientWidth": 1920,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 1380,
+        "height": 1016,
+        "top": 64,
+        "right": 1610,
+        "bottom": 1080,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 64,
+            "top": 0,
+            "right": 1920,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 2560,
+      "height": 1440,
+      "documentScrollWidth": 2560,
+      "documentClientWidth": 2560,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 2020,
+        "height": 1376,
+        "top": 64,
+        "right": 2250,
+        "bottom": 1440,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 2560,
+            "height": 64,
+            "top": 0,
+            "right": 2560,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "dashboard",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "map",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "skills",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "combat",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "quests",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "town",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "bank",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "character",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "collections",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    },
+    {
+      "view": "settings",
+      "width": 7680,
+      "height": 2160,
+      "documentScrollWidth": 7680,
+      "documentClientWidth": 7680,
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "mainOverflow": 0,
+      "mainRect": {
+        "x": 230,
+        "y": 64,
+        "width": 7140,
+        "height": 2096,
+        "top": 64,
+        "right": 7370,
+        "bottom": 2160,
+        "left": 230
+      },
+      "shellVisible": true,
+      "mainHasContent": true,
+      "fatalText": false,
+      "fixedObstructions": [
+        {
+          "className": "topbar",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 7680,
+            "height": 64,
+            "top": 0,
+            "right": 7680,
+            "bottom": 64,
+            "left": 0
+          }
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "runtimeErrors": []
+}
